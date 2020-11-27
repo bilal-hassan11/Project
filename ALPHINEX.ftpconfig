@@ -1,0 +1,17 @@
+{
+    "protocol": "ftp",
+    "host": "ftp.alphinex.com",
+    "port": 21,
+    "user": "projects@alphinex.com",
+    "pass": "Nd2f?4TJ#R?8",
+    "promptForPass": false,
+    "remote": "/brown_box_ninja/",
+    "local": "",
+    "secure": false,
+    "secureOptions": null,
+    "connTimeout": 10000,
+    "pasvTimeout": 10000,
+    "keepalive": 10000,
+    "watch": [],
+    "watchTimeout": 500
+}
