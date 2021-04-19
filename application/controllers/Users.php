@@ -20,25 +20,14 @@ class users extends CI_Controller {
 
         parent::__construct();
 
-
         $this->load->helper(array('form', 'url'));
-
         $this->load->library('session');
-
         $this->load->model('basic_model');
         $this->load->model('admin_model');
-
         $this->load->model('usersmodel');
-
         $this->load->library('encryption');
-
-
         $this->load->database();
-
-
-
-		    $this->user_id = $this->session->userdata("id");
-
+	    $this->user_id = $this->session->userdata("id");
 
     }
 
@@ -47,31 +36,22 @@ class users extends CI_Controller {
     function index() {
 
         $this->login();
-
         $user_id = $this->session->userdata("id");
-
         if ($user_id != "") {
 
             redirect(site_url("System_users"));
-
         }
 
     }
 
-
-
     function signup() {
 
         $this->load->library(('encryption'));
-
         if ($this->input->post()) {
-
             extract($_POST);
-
             if (empty($username) || empty($email) || empty($password)) {
 
                 echo json_encode(array("error" => 1, "message" => "Missing parameters"));
-
             } else {
 
                 $userdata = $this->usersmodel->validateUser($username, $email);
